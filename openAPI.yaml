@@ -94,14 +94,14 @@ paths:
             security:
                 - Bearer: []
             requestBody:
-                description: With this request you can send a link to email to reset password
+                description: With this request you can send a link to the user's email to reset password
                 content:
                     'application/json':
                         schema:
-                            $ref: '#/components/schemas/User'   
+                            $ref: '#/components/schemas/User/password-reset'   
             responses:
                 '201':
-                    description: email with an resetlink has been sennt to the user email address
+                    description: email with an resetlink has been sent to the user's email address
     /users/settings: #add JWT security
         put:
             summary: User settings (email, pass etc.)
